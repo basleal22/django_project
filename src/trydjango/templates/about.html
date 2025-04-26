@@ -1,0 +1,17 @@
+{%extends "base.html"%}
+{% block content%}
+<h1>i am a biomedical engineering student and also i love coding</h1>
+<p>this is a template</p>
+<p>
+    {{my_text}},{{my_number}}
+</p>
+<ul>
+{% for sub_item in list_items %}
+    {% if sub_item == 133 %}
+        <li>{{ forloop.counter }} - {{ sub_item|add:22}}</li>
+    {% else %}
+        <li>{{ forloop.counter }} - {{ sub_item}}</li>
+        {% endif %}
+{% endfor %}
+</ul>
+{% endblock%}
